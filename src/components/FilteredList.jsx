@@ -33,11 +33,8 @@ const FilteredList = ({ term }) => {
 
     const regexObj = new RegExp(expression)
 
-    if (!term?.lip.includes({ value: '.' })) {
-      setWordsList((prevState) =>
-        prevState.filter((word) => regexObj.test(word))
-      )
-    }
+    setWordsList((prevState) => prevState.filter((word) => regexObj.test(word)))
+
     //--------------------------------------------
   }, [term])
 
